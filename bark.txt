@@ -1,2 +1,12 @@
-COOOOOODE
-Another Piece of code
+Project- Git/Python Project
+
+Make sure that you:
+
+-Understand Git and containerization 
+-Python Objects and scripting
+
+Package Math or Time
+
+-Exponential Calculator
+-Clock
+-Cash Register
