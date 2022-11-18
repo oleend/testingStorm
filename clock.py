@@ -1,6 +1,7 @@
 import math
 import time
 from datetime import datetime
+from ImportingThings import TimeMaster
 
 #This is for the stopwatch
 instancetime = datetime.now()
@@ -14,7 +15,7 @@ while app == True:
    currentTime = datetime.now()
    called_Time = currentTime.strftime("%H:%M:%S")
    print('Current Time is: ' + called_Time)
-   clockOption = input("What would you like to do: Refresh (T)ime, Show (D)ate, (S)topwatch, (Q)uit: ").lower()
+   clockOption = input("What would you like to do: Refresh (T)ime, Show (D)ate, (S)topwatch, (Q)uit, Summon TimeLord(W): ").lower()
    print()
 
    if clockOption  == 'q':
@@ -23,6 +24,18 @@ while app == True:
    if clockOption == 't':
         continue
 
+#Imports the TimeLord
+   if clockOption == 'w':
+       TimeLord = TimeMaster()
+       print("The Time Lord Master was summoned, and used his dark magic to send you to his time.")
+       Hour = round(TimeLord.time_magic() * float(currentTime.strftime('%H')))
+       Minute = round(TimeLord.time_magic() * float(currentTime.strftime('%M')))
+       Second = round(TimeLord.time_magic() * float(currentTime.strftime('%S')))
+       called_Time = Hour + Minute + Second
+       print(f"The current time is: {Hour}:{Minute}:{Second}, Good Luck!" )
+       time.sleep(5)
+       print()
+       print("You found a way back to reality!")
    if clockOption == 'd':
        currentTime = datetime.now()
        called_date = currentTime.strftime("%m/%d/%Y")
@@ -93,13 +106,9 @@ while app == True:
             else:
                 print()
 
-
-
-
-
    else:
        if app == True:
-        print("Please Enter a Valid Option, Clock Updated.")
+        print("Make sure to Enter a Valid Option! Clock Updated and Returned.")
        print()
 
 
