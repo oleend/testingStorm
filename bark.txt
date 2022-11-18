@@ -2,8 +2,8 @@ Project- Git/Python Project
 
 Make sure that you:
 
--Understand Git and containerization 
--Python Objects and scripting
+-Run in Terminal
+-Create new file and instance
 
 Package Math or Time
 
